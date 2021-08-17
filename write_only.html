@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Write Only</title>
+  </head>
+  <body>
+    <h1>Write Only</h1>
+    <p>Write text into the form and press the button to send it to the server. The received text will be printed in the command line.</p>
+    <form action="" onsubmit="sendMessageFromForm(event, 'input')">
+        <input type="text" id="input" autocomplete="off"/>
+        <button>Send message</button>
+    </form>   
+    <script src="ws_tools.js"></script>
+  </body>
+</html>

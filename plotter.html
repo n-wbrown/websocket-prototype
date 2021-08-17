@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Plotter</title>
+    </head>
+    <body>
+        <h1>Plotter</h1>
+        <p>Every second a random value will be added to the plot below. The value will be betweeen 0 and 1. These limits can be changed at any time by the user using the buttons below.</p>
+        <div id="plot_area"></div>
+        <form action="" onsubmit="sendMessage(event,'low','mLow')">
+            <input type="text" id="mLow" autocomplete="off"/>
+            <button>Set low</button>
+        </form>   
+        <form action="" onsubmit="sendMessage(event,'high','mHigh')">
+            <input type="text" id="mHigh" autocomplete="off"/>
+            <button>Set high</button>
+        </form>   
+        <form action="" onsubmit="sendMessage(event,'cancel','cancel')">
+            <input type="text" id="cancel" autocomplete="off"/>
+            <button>Stop</button>
+        </form>   
+        <ul id='messages'>
+        </ul>
+        <script src="https://d3js.org/d3.v5.min.js"></script>
+        <script src="ws_tools.js"></script>
+        <script src="plotter.js"></script>
+    </body>
+</html>
